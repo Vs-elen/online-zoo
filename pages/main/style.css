@@ -11,6 +11,8 @@ button,
     cursor: pointer;
 }
 
+
+
 p {
 
 font-style: normal;
@@ -54,16 +56,28 @@ margin-right: 63px;
     text-decoration: none;
     
 }
+.backstage__button,
 .footer a,
 .footer__media-text {
     transition: all 0.3s ease;
 }
-.footer a:hover .footer__media-text,
+.footer a:hover .footer__media-text {
+    color: #4B9200;
+}
+.footer__icon {
+    transition: all 0.3s ease;
+}
+.footer a:hover .footer__icon {
+    background: #4B9200;
+}
+
 .footer a:hover,
 .header__link:hover {
     color: #FE9013;
 }
-
+.backstage__button:hover {
+    background: #4B9200;
+}
 .section-btn:hover {
     background: #E47209;
 }
@@ -190,7 +204,32 @@ margin-top: 54px;
     top: 8px;
     right: 0;
 }
-
+.backstage .backstage__table {
+    position: relative;
+}
+.backstage__btns {
+    top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+ 
+    width: calc(100% + 162px);
+   
+    left: -82px;
+    
+position: absolute;
+display: flex;
+justify-content: space-between;
+}
+.backstage__button {
+    cursor: pointer;
+    width: 62px;
+height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .backstage__table {
     margin-top: 180px;
 }
@@ -210,6 +249,7 @@ margin-top: 54px;
 
 .backstage__img {
     height: 366px;
+    transition: all 0.3s ease;
 }
 
 .card__info {
@@ -259,6 +299,42 @@ color: #000000;
     
 }
 
+.backstage__block {
+    position: relative;
+    overflow: hidden;
+}
+
+.backstage__text {
+    position: absolute;  
+    margin: 16px;    
+    transition: all 0.3s ease;   
+    
+    color: #fff;
+    opacity: 0;
+}
+
+.backstage__over {
+    background-color:rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    position: absolute;    
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.backstage__item:hover .backstage__over, 
+.backstage__item:hover .backstage__text {
+    opacity: 1;
+    z-index: 99;
+}
+
+.backstage__item {
+    cursor: pointer;
+}
+
+
+.backstage__item:hover .backstage__img {
+    transform: scale(1.1);
+}
 .pick {
     padding-top: 69px;
     padding-bottom: 100px;
@@ -610,4 +686,7 @@ color: #FFFFFF;
 
 .footer__info-text:first-child {
     margin-bottom: 10px;
+}
+button:active {
+    background-color: #4B9200 !important;
 }
