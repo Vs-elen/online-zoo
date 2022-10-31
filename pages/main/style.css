@@ -521,10 +521,12 @@ max-width: 237px;
     border-radius: 5px !important;
     height: 8px !important;
     background: #F5F7F6 !important;
+    
 }
 
 .swiper-pagination-progressbar-fill {
     background: #FE9013 !important;
+    border-radius: 5px !important;
 }
 
 .testimonials .section-btn {
@@ -582,6 +584,8 @@ font-size: 16px;
 line-height: 140%;
 color: #BDBDBD;
 }
+
+
 .footer__form-btn {
     padding: 7px 39px;
     background: #F1F3F2;
@@ -594,12 +598,18 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 140%;
-/* or 22px */
-
-
-/* Green */
-
 color: #4B9200;
+}
+
+.footer__form-btn.footer__form-btn_mistake {
+border: 1px solid #D31414;
+color: #D31414;
+}
+
+.footer__form-btn.footer__form-btn_default {
+    border: 1px solid #000000;
+    color: #000000; 
+
 }
 
 .footer__title {
@@ -689,4 +699,9 @@ color: #FFFFFF;
 }
 button:active {
     background-color: #4B9200 !important;
+}
+
+.footer__link.footer__link_active,
+.header__link.header__link_active {
+    color: #F9804B;
 }
