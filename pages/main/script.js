@@ -6,3 +6,6 @@ let swiper = new Swiper(".testimonials__table", {
         type: "progressbar",
       },    
   });
+
+
+

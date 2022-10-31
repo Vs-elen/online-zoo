@@ -1,7 +1,14 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@100;300;400;500;700&display=swap');
 .main {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+a,
+button,
+.footer__form-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 p {
@@ -47,9 +54,18 @@ margin-right: 63px;
     text-decoration: none;
     
 }
-
+.footer a,
+.footer__media-text {
+    transition: all 0.3s ease;
+}
+.footer a:hover .footer__media-text,
+.footer a:hover,
 .header__link:hover {
     color: #FE9013;
+}
+
+.section-btn:hover {
+    background: #E47209;
 }
 
 .header__block {
@@ -68,6 +84,8 @@ align-items: center;
 .hero {
     background-image: url("../../assets/images/Giant Panda.jpg");
     background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .hero__title {
@@ -474,10 +492,24 @@ margin-bottom: 68px;
     min-width:     210px;
 }
 
+.footer__input:focus {
+    outline: 1px solid  #4B9200;
+    border: 1px solid #4B9200;
+    
+   
+}
+.footer__input::placeholder {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+color: #BDBDBD;
+}
 .footer__form-btn {
     padding: 7px 39px;
     background: #F1F3F2;
-/* Green */
+margin-left: 6px;
 
 border: 1px solid #4B9200;
 border-radius: 5px;
@@ -521,6 +553,12 @@ list-style-type: none;
 }
 .footer__media a {
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer__media a:last-child {
+    margin-bottom: 0;
 }
 
 .footer__icon {
@@ -532,4 +570,44 @@ height: 26px;
     align-items: center;
     border-radius: 50%;
     margin-right: 12px;
+}
+
+.footer__table {
+
+display: grid;
+grid-template-columns: auto auto auto auto;
+gap: 58px;
+margin: 0;
+position: relative;
+left: 38px;
+}
+
+.footer__bottom {
+    margin-top: 44px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer__link,
+.footer__media-text {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+color: #FFFFFF;
+}
+
+.footer__info-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;    
+}
+
+.footer__info-text:first-child {
+    margin-bottom: 10px;
 }
