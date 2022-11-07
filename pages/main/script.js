@@ -33,10 +33,10 @@ let swiper = new Swiper(".testimonials__table", {
     e.currentTarget.classList.add('header__link_active');
   }
 
-  document.querySelectorAll('.header__link').forEach(item => {
+  document.querySelectorAll('.header__link_empty').forEach(item => {
     item.addEventListener('click', handleHeadClick)
   })
-  document.querySelectorAll('.footer__link').forEach(item => {
+  document.querySelectorAll('.footer__link_empty').forEach(item => {
     item.addEventListener('click', handleClick)
   })
 
