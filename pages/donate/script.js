@@ -4,20 +4,35 @@ let amount = document.querySelectorAll('.help__item');
 inputNum.addEventListener("focus", myFocusFunction, true);
 inputNum.addEventListener("blur", myBlurFunction, true);
 
-
-
+inputNum.value = 100;
+console.log(document.querySelector('.active .help__item-number').innerText.slice(1))
 const handleInputClick = (e) => {
   e.preventDefault();
   const active = document.querySelector('.active');
+  
   if(active){
-    active.classList.remove('active');
+    active.classList.remove('active');    
   }
   e.currentTarget.classList.add('active');
+  let currentNum = e.currentTarget.querySelector('.help__item-number').innerText.slice(1);
+  let activeNum = parseInt(currentNum)
+  inputNum.value = activeNum
 }
 amount.forEach(item => {
   item.addEventListener("click", handleInputClick, true);
 })
 
+inputNum.addEventListener('input', function() {
+  amount.forEach(item => {
+    let amountNum = item.querySelector('.help__item-number').innerText.slice(1);
+    let curAmount = parseInt(amountNum);
+    if (inputNum.value == curAmount) {
+      document.querySelector('.active').classList.remove('active')
+      item.classList.add('active');
+    } 
+  })
+  
+})
 
 
 function myFocusFunction() {
@@ -55,6 +70,25 @@ document.querySelectorAll('.header__link_empty').forEach(item => {
 })
 document.querySelectorAll('.footer__link_empty').forEach(item => {
   item.addEventListener('click', handleClick)
+})
+
+let burgerButton = document.querySelector('.header__burger');
+let burgerMenu = document.querySelector('.header__inner');
+let burgerClose = document.querySelector('.header__inner-close');
+let burgerOverlay = document.querySelector('.inner__overlay');
+
+burgerButton.addEventListener('click', function() {
+  burgerMenu.style.top = '0';
+  document.body.style.overflow = 'hidden'
+})
+
+burgerClose.addEventListener('click', function() {
+  burgerMenu.style.top = '-100%';
+  document.body.style.overflow = 'visible'
+})
+burgerOverlay.addEventListener('click', function() {
+  burgerMenu.style.top = '-150%';
+  document.body.style.overflow = 'visible'
 })
 
 
